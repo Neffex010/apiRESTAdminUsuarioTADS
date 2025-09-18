@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "58e1ee17-8d61-4789-b782-d1a72c0460f6",
+		"name": "apiRESTAdminUsuarioTADS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48033501"
+	},
+	"item": [
+		{
+			"name": "Generales",
+			"item": [
+				{
+					"name": "getCenso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44374/tads/Censo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44374",
+							"path": [
+								"tads",
+								"Censo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCensoId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44374/tads/Censo/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44374",
+							"path": [
+								"tads",
+								"Censo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postCenso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 5,\r\n  \"curp\": \"CURP444555\",\r\n  \"nombre\": \"Roberto\",\r\n  \"apellidoPaterno\": \"Jiménez\",\r\n  \"apellidoMaterno\": \"Gómez\",\r\n  \"direccion\": \"Zona Centro 321\",\r\n  \"actividadEconomica\": \"Profesor\"\r\n}\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44374/tads/Censo?posicion=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44374",
+							"path": [
+								"tads",
+								"Censo"
+							],
+							"query": [
+								{
+									"key": "posicion",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putCenso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 9,\r\n  \"curp\": \"CURPXXXYYY\",\r\n  \"nombre\": \"Test\",\r\n  \"apellidoPaterno\": \"Error\",\r\n  \"apellidoMaterno\": \"Negativo\",\r\n  \"direccion\": \"N/A\",\r\n  \"actividadEconomica\": \"N/A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44374/tads/Censo?posicion=-3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44374",
+							"path": [
+								"tads",
+								"Censo"
+							],
+							"query": [
+								{
+									"key": "posicion",
+									"value": "-3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCenso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44374/tads/Censo?posicion=10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44374",
+							"path": [
+								"tads",
+								"Censo"
+							],
+							"query": [
+								{
+									"key": "posicion",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AdminBD",
+			"item": []
+		},
+		{
+			"name": "Usuario",
+			"item": []
+		}
+	]
+}
